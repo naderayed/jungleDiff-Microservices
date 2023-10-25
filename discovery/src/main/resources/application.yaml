@@ -1,0 +1,5 @@
+spring: #tell eureka to read the configuration from the config server
+  config:
+    import: optional:configserver:http://localhost:8888 # optional mean that in case the eureka fail find the config it has to still up and do not fail and give it where the config is
+  application:
+    name: discovery
