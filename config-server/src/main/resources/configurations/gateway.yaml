@@ -16,3 +16,7 @@ spring:
           uri: http://localhost:8070
           predicates:
             - Path=/api/v1/claims/**
+        - id: movingServices
+          uri: http://localhost:8050
+          predicates:
+            - Path=/api/v1/demands/**, /api/v1/movingOffers/**

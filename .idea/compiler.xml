@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="claims" />
+        <module name="movingService" />
         <module name="config-server" />
         <module name="gateway" />
         <module name="discovery" />
@@ -20,6 +21,7 @@
       <module name="config-server" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="movingService" options="-parameters" />
     </option>
   </component>
 </project>
