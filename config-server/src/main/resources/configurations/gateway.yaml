@@ -16,3 +16,7 @@ spring:
           uri: http://localhost:8070
           predicates:
             - Path=/api/v1/claims/**
+        - id: carpooling
+          uri: http://localhost:8071
+          predicates:
+            - Path=/api/v1/cars/**

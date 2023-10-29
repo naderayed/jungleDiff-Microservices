@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mysql-container:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: degla
+      MYSQL_USER: degla
+      MYSQL_PASSWORD: degla
+      MYSQL_DATABASE: junglediff_carpooling
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
