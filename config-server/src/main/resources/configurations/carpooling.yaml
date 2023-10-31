@@ -2,7 +2,6 @@
 eureka:
   instance:
     hostname: localhost
-
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
@@ -13,20 +12,21 @@ server:
   port: 8071
 spring:
   application:
-    name: carpooling # This name will be displayed on the Eureka interface (our discovery service)
+    name: carpooling
+
+  h2:
+    console:
+      enabled: true # Enable H2 console for development purposes
 
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql-container:3306/junglediff_carpooling?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: degla
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:test # In-memory H2 database
+    username: degla # Default H2 username
+    password: degla # Default H2 password
 
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
-    database: mysql
-    database-platform: org.hibernate.dialect.MySQLDialect
-
-
+      ddl-auto: update # You can use "update" to create/update tables
+    database-platform: org.hibernate.dialect.H2Dialect # Use H2 dialect
 # End service config

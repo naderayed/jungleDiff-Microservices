@@ -1,15 +1,13 @@
 version: '3'
-
 services:
-  mysql-container:
-    image: mysql:latest
-    container_name: mysql-container
-    environment:
-      MYSQL_ROOT_PASSWORD: degla
-      MYSQL_USER: degla
-      MYSQL_PASSWORD: degla
-      MYSQL_DATABASE: junglediff_carpooling
+  h2:
+    image: oscarfonts/h2:latest
+    container_name: h2_carpooling
     ports:
-      - "3306:3306"
+      - "9092:9092"  # Map container port 9092 to host port 9092
     volumes:
-      - ./mysql-data:/var/lib/mysql
+      - ./data:/h2-data  # Mount a volume for H2 data storage
+    environment:
+      - H2_TCP_PORT=9092  # Optional: Set H2's TCP port (change to your desired port)
+      - H2_USER=degla   # Set the H2 user
+      - H2_PASSWORD=degla  # Set the H2 password
