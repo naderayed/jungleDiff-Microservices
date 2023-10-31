@@ -34,7 +34,7 @@ public class EmergencyController {
             return ResponseEntity.ok(es.editEmergency(e));
         }
         @DeleteMapping
-        public ResponseEntity<String> deleteEmergency(@RequestBody int e){
+        public ResponseEntity<String> deleteEmergency(@RequestParam int e){
             es.deleteEm(e);
             return ResponseEntity.ok("Emergency deleted successfully");
         }
