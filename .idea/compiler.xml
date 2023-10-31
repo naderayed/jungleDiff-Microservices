@@ -7,21 +7,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="claims" />
+        <module name="movingService" />
         <module name="config-server" />
-        <module name="gateway" />
+        <module name="notification" />
         <module name="discovery" />
         <module name="carpooling" />
+        <module name="claims" />
+        <module name="FeedBacks" />
+        <module name="articles" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="clients" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="carpooling" options="-parameters" />
+      <module name="FeedBacks" options="-parameters" />
+      <module name="articles" options="-parameters" />
       <module name="claims" options="-parameters" />
+      <module name="clients" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="movingService" options="-parameters" />
+      <module name="notification" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,0 +1,30 @@
+#start Discovery config
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+# end Discovery config
+
+#start service config
+server:
+  port: 8076
+spring:
+  application:
+    name: notification #this name will be displated on the eureka interface (our discovery service)
+  zipkin:
+    base-url: http://localhost:9411
+  datasource:
+    url: jdbc:postgresql://localhost:5432/junglediff_notifications
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
