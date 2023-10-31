@@ -29,5 +29,15 @@ public class DemandsServiceImpl implements DemandService {
         return demandsRepository.findAll();
     }
 
+    @Override
+    public Demands updateDemands(Demands demand) {
+        return demandsRepository.save(demand);
+    }
+
+    @Override
+    public void deleteDemands(String demandId) {
+        demandsRepository.deleteById(demandId);
+    }
+
     // Implement other CRUD methods
 }

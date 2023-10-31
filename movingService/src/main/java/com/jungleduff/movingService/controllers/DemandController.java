@@ -30,4 +30,14 @@ public class DemandController {
         return demandService.getAllDemands();
     }
 
+    @PutMapping
+    public Demands updateDemands(@RequestBody Demands updatedDemands) {
+        return demandService.updateDemands(updatedDemands);
+    }
+
+    @DeleteMapping("{id}")
+    public void deleteDemands(@PathVariable String id) {
+        demandService.deleteDemands(id);
+    }
+
 }
