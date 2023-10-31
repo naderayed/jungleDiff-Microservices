@@ -24,6 +24,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="articles" options="" />
       <module name="carpooling" options="-parameters" />
       <module name="FeedBacks" options="-parameters" />
       <module name="articles" options="-parameters" />
@@ -33,7 +34,7 @@
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="movingService" options="-parameters" />
-      <module name="notification" options="-parameters" />
+      <module name="notification" options="" />
     </option>
   </component>
 </project>
