@@ -1,0 +1,24 @@
+#start Discovery config
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+# end Discovery config
+
+#start service config
+server:
+  port: 8060
+spring:
+  application:
+    name: feedbacks #this name will be displated on the eureka interface (our discovery service)
+  data:
+    mongodb:
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      database: junglediff_feedbacks
+      port: 27016
+      host: localhost

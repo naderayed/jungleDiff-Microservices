@@ -1,0 +1,8 @@
+# Application name that will be used in the config  must configure from here
+# set the location of our config server
+spring:
+  application:
+    name: feedbacks #this name will be displayed on the eureka interface (our discovery service)
+  config:
+    import: optional:configserver:http://localhost:8888 # config service url
+
