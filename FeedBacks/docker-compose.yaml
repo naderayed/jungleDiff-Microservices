@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mongodb:
     image: mongo
-    container_name: mongodb
+    container_name: mongodb-feedback
     ports:
       - 27018:27017
     volumes:
@@ -13,7 +13,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: 12345
   mongo-express:
     image: mongo-express
-    container_name: mongo-express
+    container_name: mongo-express-feedback
     ports:
       - 8082:8081
     environment:

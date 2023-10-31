@@ -14,11 +14,12 @@ server:
 spring:
   application:
     name: feedbacks #this name will be displated on the eureka interface (our discovery service)
+
   data:
     mongodb:
       authentication-database: admin
-      username: rootuser
-      password: rootpass
+      username: noswear
+      password: 12345
       database: junglediff_feedbacks
-      port: 27016
+      port: 27018
       host: localhost
