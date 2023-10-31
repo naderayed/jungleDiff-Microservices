@@ -1,24 +1,32 @@
-#start Discovery config
+# Start Discovery config
 eureka:
   instance:
     hostname: localhost
-
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-# end Discovery config
+# End Discovery config
 
-#start service config
+# Start service config
 server:
   port: 8060
 spring:
   application:
-    name: feedbacks #this name will be displated on the eureka interface (our discovery service)
-  data:
-    mongodb:
-      authentication-database: admin
-      username: rootuser
-      password: rootpass
-      database: junglediff_feedbacks
-      port: 27016
-      host: localhost
+    name: feedbacks
+
+  h2:
+    console:
+      enabled: true # Enable H2 console for development purposes
+
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:test # In-memory H2 database
+    username: feedbacks # Default H2 username
+    password: feedbacks # Default H2 password
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update # You can use "update" to create/update tables
+    database-platform: org.hibernate.dialect.H2Dialect # Use H2 dialect
+# End service config
