@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/discovery/pom.xml" />
         <option value="$PROJECT_DIR$/claims/pom.xml" />
+        <option value="$PROJECT_DIR$/carpooling/pom.xml" />
         <option value="$PROJECT_DIR$/movingService/pom.xml" />
         <option value="$PROJECT_DIR$/articles/pom.xml" />
         <option value="$PROJECT_DIR$/notification/pom.xml" />

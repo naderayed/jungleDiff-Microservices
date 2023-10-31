@@ -11,6 +11,7 @@
         <module name="config-server" />
         <module name="notification" />
         <module name="discovery" />
+        <module name="carpooling" />
         <module name="claims" />
         <module name="FeedBacks" />
         <module name="articles" />
@@ -23,6 +24,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="carpooling" options="-parameters" />
       <module name="FeedBacks" options="-parameters" />
       <module name="articles" options="-parameters" />
       <module name="claims" options="-parameters" />

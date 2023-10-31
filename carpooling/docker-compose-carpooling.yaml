@@ -1,0 +1,13 @@
+version: '3'
+services:
+  h2:
+    image: oscarfonts/h2:latest
+    container_name: h2_carpooling
+    ports:
+      - "9092:9092"  # Map container port 9092 to host port 9092
+    volumes:
+      - ./data:/h2-data  # Mount a volume for H2 data storage
+    environment:
+      - H2_TCP_PORT=9092  # Optional: Set H2's TCP port (change to your desired port)
+      - H2_USER=degla   # Set the H2 user
+      - H2_PASSWORD=degla  # Set the H2 password
