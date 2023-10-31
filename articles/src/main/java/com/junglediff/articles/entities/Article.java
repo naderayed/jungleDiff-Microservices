@@ -7,8 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Entity
 @NoArgsConstructor
@@ -23,6 +23,6 @@ public class Article {
     Integer articleId;
     String articleTitle;
     String articleContent;
-    LocalDateTime creationDate;
+    LocalDate creationDate;
     String articleImage;
 }

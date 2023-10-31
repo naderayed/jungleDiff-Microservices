@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
 @Service
-public class NotificationServiceImp implements NotificationService{
+public class NotificationServiceImp implements NotificationService {
 
     private final NotificationRepository notificationRepository;
 
@@ -21,6 +21,7 @@ public class NotificationServiceImp implements NotificationService{
     public void send(NotificationRequest notificationRequest) {
         notificationRepository.save(
                 Notification.builder()
+                        .toArticleId(notificationRequest.toArticleId())
                         .toArticleTitle(notificationRequest.toArticleTitle())
                         .sender("Junglediff")
                         .message(notificationRequest.message())

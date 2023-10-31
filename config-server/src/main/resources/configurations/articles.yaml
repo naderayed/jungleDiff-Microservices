@@ -28,3 +28,27 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: junglediff-client
+            redirect-uri: http://localhost:8222/login/oauth2/code/keycloak
+            authorization-grant-type: authorization_code
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/Junglediff
+            user-name-attribute: preferred_username
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/Junglediff
+
+keycloak:
+  realm: Junglediff
+  auth-server-url: http://localhost:8080/auth
+  use-resource-role-mappings: true
+  bearer-only: true
+  resource: junglediff-client
+

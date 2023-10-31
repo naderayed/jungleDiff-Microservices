@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -19,6 +21,7 @@ public class ArticleServiceImp implements ArticleService {
     @Override
     public Article addArticle(Article article) {
         try {
+            article.setCreationDate(LocalDate.now());
             Article savedArticle = articleRepository.saveAndFlush(article);
             notificationClient.sendNotification(
                     new NotificationRequest(
