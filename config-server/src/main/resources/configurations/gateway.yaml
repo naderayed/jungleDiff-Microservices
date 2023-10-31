@@ -18,10 +18,18 @@ spring:
           uri: http://localhost:8070
           predicates:
             - Path=/api/v1/claims/**
+        - id: carpooling
+          uri: http://localhost:8071
+          predicates:
+            - Path=/api/v1/cars/**
         - id: movingServices
           uri: http://localhost:8050
           predicates:
             - Path=/api/v1/demands/**, /api/v1/movingOffers/**
+        - id: feedbacks
+          uri: http://localhost:8060
+          predicates:
+            - Path=/api/v1/Review/**, /api/v1/Rating/**
         - id: articles
           uri: http://localhost:8075
           predicates:
