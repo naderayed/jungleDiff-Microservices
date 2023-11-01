@@ -13,6 +13,7 @@
         <module name="discovery" />
         <module name="claims" />
         <module name="feedbacks" />
+        <module name="emergency" />
         <module name="articles" />
         <module name="gateway" />
         <module name="carpooling" />
@@ -27,11 +28,12 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="FeedBacks" options="-parameters" />
       <module name="articles" options="-parameters" />
-      <module name="carpooling" options="-parameters" />
+      <module name="carpooling" options="" />
       <module name="claims" options="-parameters" />
       <module name="clients" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovery" options="-parameters" />
+      <module name="emergency" options="-parameters" />
       <module name="feedbacks" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="movingService" options="-parameters" />
