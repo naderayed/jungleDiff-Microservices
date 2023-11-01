@@ -11,11 +11,12 @@
         <module name="config-server" />
         <module name="notification" />
         <module name="discovery" />
-        <module name="carpooling" />
         <module name="claims" />
         <module name="FeedBacks" />
+        <module name="feedbacks" />
         <module name="articles" />
         <module name="gateway" />
+        <module name="carpooling" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,16 +25,16 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="articles" options="" />
-      <module name="carpooling" options="-parameters" />
       <module name="FeedBacks" options="-parameters" />
       <module name="articles" options="-parameters" />
+      <module name="carpooling" options="-parameters" />
       <module name="claims" options="-parameters" />
       <module name="clients" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovery" options="-parameters" />
+      <module name="feedbacks" options="-parameters" />
       <module name="gateway" options="-parameters" />
-      <module name="movingService" options="-parameters" />
+      <module name="movingService" options="" />
       <module name="notification" options="" />
     </option>
   </component>
