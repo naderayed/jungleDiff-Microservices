@@ -42,3 +42,9 @@ spring:
           uri: http://localhost:8090
           predicates:
             - Path=/api/v1/emergency/**
+        - id: nodeservice
+          uri: http://localhost:3000
+          predicates:
+            - Path=/api/v1/user/**
+          filters:
+            - RewritePath=^/api/v1/user(?<remaining>.+), $\{remaining}
