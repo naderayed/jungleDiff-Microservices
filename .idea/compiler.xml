@@ -12,7 +12,6 @@
         <module name="notification" />
         <module name="discovery" />
         <module name="claims" />
-        <module name="FeedBacks" />
         <module name="feedbacks" />
         <module name="articles" />
         <module name="gateway" />
@@ -21,6 +20,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="clients" target="17" />
+      <module name="FeedBacks" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -34,8 +34,8 @@
       <module name="discovery" options="-parameters" />
       <module name="feedbacks" options="-parameters" />
       <module name="gateway" options="-parameters" />
-      <module name="movingService" options="" />
-      <module name="notification" options="" />
+      <module name="movingService" options="-parameters" />
+      <module name="notification" options="-parameters" />
     </option>
   </component>
 </project>

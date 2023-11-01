@@ -1,27 +1,13 @@
-# Use root/example as user/password credentials
-version: '3.8'
+version: '3'
 services:
-  mongodb:
-    image: mongo
-    container_name: mongodb
+  h2:
+    image: oscarfonts/h2:latest
+    container_name: h2_feedbacks
     ports:
-      - 27018:27017
+      - "9093:9092"  # Map container port 9092 to host port 9092
     volumes:
-      - data:/data
+      - ./data:/h2-data  # Mount a volume for H2 data storage
     environment:
-      MONGO_INITDB_ROOT_USERNAME: noswear
-      MONGO_INITDB_ROOT_PASSWORD: 12345
-  mongo-express:
-    image: mongo-express
-    container_name: mongo-express
-    ports:
-      - 8082:8081
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: noswear
-      ME_CONFIG_MONGODB_ADMINPASSWORD: 12345
-      ME_CONFIG_MONGODB_SERVER: mongodb
-volumes:
-  data: {}
-networks:
-  default:
-    name: mongodb_network
+      - H2_TCP_PORT=9093  # Optional: Set H2's TCP port (change to your desired port)
+      - H2_USER=feedbacks   # Set the H2 user
+      - H2_PASSWORD=feedbacks  # Set the H2 password
