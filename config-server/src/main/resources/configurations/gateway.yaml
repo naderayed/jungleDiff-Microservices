@@ -27,7 +27,7 @@ spring:
           predicates:
             - Path=/api/v1/demands/**, /api/v1/movingOffers/**
         - id: feedbacks
-          uri: http://localhost:8060
+          uri: http://localhost:8079
           predicates:
             - Path=/api/v1/Review/**, /api/v1/Rating/**
         - id: articles
